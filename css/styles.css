@@ -7,7 +7,11 @@
   --bg-section-next: #e5e5e5;
   --footer-color: #2f303a;
   --border-color: #EEEEEE;
+  --icon-color: currentColor;
+  --basic-icon-color: #AFB1B8;
 }
+
+
 
 h1,
 h2,
@@ -81,12 +85,16 @@ li {
 
 .link {
   text-decoration: none;
+  display: block;
 }
 .contacts-link {
   color: var(--text-color);
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.14;
+
+  display: flex;
+  align-items: center;
 }
 
 .contacts {
@@ -95,7 +103,7 @@ li {
 }
 
 .contacts-item {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .contacts-item:first-child {
@@ -161,6 +169,16 @@ li {
   color: var(--hover-color);
 }
 
+.icon-envelope {
+  margin-right: 10px;
+  fill: var(--icon-color);
+}
+
+.icon-tel {
+  margin-right: 10px;
+  fill: var(--icon-color);
+}
+
 
 
 /* Hero */
@@ -169,6 +187,9 @@ padding-top: 200px;
 padding-bottom: 200px;
 
 background-color:var(--footer-color);
+background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),url(../images/hero.jpg);
+max-width: 1600px;
+margin: 0 auto;
 }
 
 .hero-centr {
@@ -202,12 +223,23 @@ background-color:var(--footer-color);
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  cursor: pointer;
 }
 /* секция 2 особенности  */
 
-.logic-title {
-  /*что бы не мешал верстке */
-  display: none;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .section {
@@ -218,6 +250,7 @@ background-color:var(--footer-color);
 .qualities {
   background-color: var(--white-color);
 }
+
 
 .qualities-list {
   display: flex;
@@ -247,6 +280,26 @@ background-color:var(--footer-color);
   text-transform: uppercase;
   color: var(--title-color);
 }
+
+.qualities-field {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  border-radius: 4px;
+
+  background-color:var(--bg-section-color);
+}
+
+.icon-qualities {
+  display: block;
+
+  margin: 0 auto;
+
+}
+
 /* Секция 3 чем мы занимаемся  */
 .about {
   background-color: var(--white-color);
@@ -321,13 +374,85 @@ background-color:var(--footer-color);
   line-height: 1.9;
   letter-spacing: 0.03em;
   text-align: center;
-
-  margin-bottom: 30px;
   
 }
+
+.thumb-social {
+  display: flex;
+  text-align: center;
+
+  margin: 16px 32px 30px 32px;
+}
+
+.thumb-item {
+  margin-right: 10px;
+}
+
+.thumb-item:last-child {
+  margin-right: 0;
+}
+
+.thumb-img {
+  fill:var(--basic-icon-color);
+}
+
+
+.thumb-link {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+
+}
+
+.thumb-link:hover,
+.thumb-link:focus {
+  background-color: var(--hover-color);
+  border-radius: 50%;
+
+}
+
+.thumb-link:hover .thumb-img,
+.thumb-link:focus .thumb-img {
+  fill: var(--white-color);
+}
+
+/* Секция 5 Постоянные клиенты */
+
+.clients {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.clients-link {
+  padding: 12px 31px;
+
+  border: 1px solid var(--basic-icon-color);
+  border-radius: 4px;
+}
+
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--hover-color);
+}
+
+
+.clients-icon {
+  fill: var(--basic-icon-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--hover-color);
+}
+
 /* footer */
 
-
+.addr-row {
+  display: flex;
+}
 
 .address {
   margin-top: 20px;
@@ -362,6 +487,48 @@ background-color:var(--footer-color);
   margin-bottom: 9px;
 }
 
+/* Subscribe */
+
+.footer-block-second {
+  margin-top: 12px;
+  margin-left: 70px;
+}
+
+.subscribe-title {
+  margin-bottom: 20px;
+
+  color: var(--white-color);
+}
+
+
+
+.subscribe-list {
+  display: flex;
+  text-align: center;
+}
+
+.subscribe-link {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  fill: var(--white-color);
+
+}
+
+.subscribe-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+
+.subscribe-link:hover,
+.subscribe-link:focus {
+  background-color: var(--hover-color);
+
+}
 
 /* Portfolio */
 
@@ -419,6 +586,7 @@ background-color:var(--footer-color);
   
 }
 
+
 .work-box {
   padding: 20px 24px;
 
@@ -456,5 +624,13 @@ background-color:var(--footer-color);
   letter-spacing: 0.03em;
 
   margin-top: 4px;
+  color: var(--text-color);
+}
+
+.work-link:hover,
+.work-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+  0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);;
 }
 
