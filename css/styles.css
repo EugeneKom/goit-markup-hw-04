@@ -259,7 +259,6 @@ margin: 0 auto;
 .qualities-item {
   margin-right: 30px;
   flex-basis: 270px;
-  /* width: 270px; */
 }
 
 .qualities-item:last-child {
@@ -282,23 +281,19 @@ margin: 0 auto;
 }
 
 .qualities-field {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   margin-bottom: 30px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+
 
   border-radius: 4px;
 
   background-color:var(--bg-section-color);
 }
 
-.icon-qualities {
-  display: block;
 
-  margin: 0 auto;
-
-}
 
 /* Секция 3 чем мы занимаемся  */
 .about {
@@ -350,9 +345,10 @@ margin: 0 auto;
   margin-left: 30px;
 }
 
-.our-team-img {
-  margin-bottom: 30px;
+.our-team-info {
+  padding: 30px 32px 30px 32px;
 }
+
 
 .our-team-list:first-child {
   margin-left: 0;
@@ -361,7 +357,7 @@ margin: 0 auto;
 .our-team-name {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.19;
   color: var(--title-color);
   letter-spacing: 0.03em;
   text-align: center;
@@ -371,17 +367,17 @@ margin: 0 auto;
 }
 .our-team-prof {
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
+
+  margin-bottom: 16px;
   
 }
 
 .thumb-social {
   display: flex;
   text-align: center;
-
-  margin: 16px 32px 30px 32px;
 }
 
 .thumb-item {
@@ -426,7 +422,9 @@ margin: 0 auto;
 
 
 .clients-link {
-  padding: 12px 31px;
+  display: flex;
+
+  padding: 15px 31px;
 
   border: 1px solid var(--basic-icon-color);
   border-radius: 4px;
@@ -452,6 +450,7 @@ margin: 0 auto;
 
 .addr-row {
   display: flex;
+  align-items: baseline;
 }
 
 .address {
@@ -490,7 +489,6 @@ margin: 0 auto;
 /* Subscribe */
 
 .footer-block-second {
-  margin-top: 12px;
   margin-left: 70px;
 }
 
